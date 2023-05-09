@@ -18,6 +18,6 @@ public class SecondActivity extends AppCompatActivity {
         ViewPager2 viewPager2 = findViewById(R.id.VP0);
         List<Integer> imageList = Arrays.asList(R.drawable.image1, R.drawable.image2, R.drawable.image3);
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(imageList);
-        viewPager2.setAdapter(imagePagerAdapter);
+        viewPager2.setAdapter(imagePagerAdapter);//
     }
 }
