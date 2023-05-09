@@ -13,9 +13,9 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
-        ViewPager2 viewPager2 = findViewById(R.id.ViewPager2);
+        ViewPager2 viewPager2 = findViewById(R.id.VP0);
         List<Integer> imageList = Arrays.asList(R.drawable.image1, R.drawable.image2, R.drawable.image3);
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(imageList);
         viewPager2.setAdapter(imagePagerAdapter);

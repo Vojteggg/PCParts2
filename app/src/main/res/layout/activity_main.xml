@@ -47,37 +47,40 @@
                     android:id="@+id/IB1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -122,37 +125,40 @@
                     android:id="@+id/IB4"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB5"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB6"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -196,37 +202,40 @@
                     android:id="@+id/IB7"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB8"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB9"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -270,37 +279,40 @@
                     android:id="@+id/IB10"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB11"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB12"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -344,37 +356,40 @@
                     android:id="@+id/IB13"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB14"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB15"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -418,37 +433,40 @@
                     android:id="@+id/IB16"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB17"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB18"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -492,37 +510,40 @@
                     android:id="@+id/IB19"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB20"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB21"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
@@ -566,37 +587,40 @@
                     android:id="@+id/IB22"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB23"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
                 <ImageButton
                     android:id="@+id/IB24"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9"
-                    android:adjustViewBounds="true"/>
+                    app:srcCompat="@drawable/intel_i9" />
 
             </LinearLayout>
 
