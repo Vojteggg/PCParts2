@@ -64,7 +64,9 @@
                 android:id="@+id/TVNazwa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nazwa procesora" />
+                android:fontFamily="@font/roboto_bold"
+                android:text="Nazwa procesora"
+                android:textSize="34sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RVInfo"
@@ -72,14 +74,9 @@
                 android:layout_height="match_parent" />
 
             <ImageView
-                android:id="@+id/IB1"
+                android:id="@+id/IMGV1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="#FFFFFF"
-                android:textAlignment="center"
                 app:srcCompat="@drawable/intel_i9" />
 
             <TextView
