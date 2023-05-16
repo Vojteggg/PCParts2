@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity{
         TV23 = findViewById(R.id.TV23);
         TV24 = findViewById(R.id.TV24);
 
+
         IB1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

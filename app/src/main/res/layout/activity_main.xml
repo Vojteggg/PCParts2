@@ -54,7 +54,7 @@
                     android:contentDescription="@string/txtprocesor1"
                     android:scaleType="fitCenter"
                     android:textAlignment="center"
-                    app:srcCompat="@drawable/intel_i9" />
+                    app:srcCompat="@drawable/image1" />
 
                 <ImageButton
                     android:id="@+id/IB2"
