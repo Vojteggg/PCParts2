@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -30,7 +31,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/open_exbold_ital"
                     android:text="PCParts - najlepsze informacje \no podzespołach!"
                     android:textAlignment="center"
                     android:textSize="24sp" />
@@ -95,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -104,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -113,7 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -176,6 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -184,6 +186,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -192,6 +195,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -253,6 +257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -261,6 +266,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -269,6 +275,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -330,6 +337,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -338,6 +346,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -346,6 +355,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -407,6 +417,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -415,6 +426,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -423,6 +435,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -484,6 +497,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -492,6 +506,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -500,6 +515,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -561,6 +577,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -569,6 +586,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -577,6 +595,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -638,6 +657,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -646,6 +666,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
 
@@ -654,6 +675,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/open_bold"
                     android:text="TextView"
                     android:textAlignment="center" />
             </LinearLayout>

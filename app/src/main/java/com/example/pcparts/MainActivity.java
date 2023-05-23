@@ -137,6 +137,14 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });//
+        IB2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                intent.putExtra("buttonIndex", 2);
+                startActivity(intent);
+            }
+        });//
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 

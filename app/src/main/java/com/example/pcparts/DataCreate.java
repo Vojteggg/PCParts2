@@ -18,10 +18,9 @@ public class DataCreate {
         price="";
         webLink="";
         table = 0;
-
     }
 
-    public DataCreate(List<Integer> imges, String name, int table,String price,String webLink) {
+    public DataCreate(List<Integer> imges, String name, int table, String price, String webLink) {
         this.name = name;
         this.imges = imges;
         this.table = table;

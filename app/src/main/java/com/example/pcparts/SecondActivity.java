@@ -3,14 +3,18 @@ package com.example.pcparts;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -24,10 +28,16 @@ public class SecondActivity extends AppCompatActivity  {
     TextView TVnazwa;
     ImageView IMGV1;
     TextView PRICE;
-
-
-
-
+    TextView T1;
+    TextView T2;
+    TextView T3;
+    TextView T4;
+    TextView T5;
+    TextView T6;
+    TextView T7;
+    TextView T8;
+    TextView T9;
+    TextView T10;
 
     private DataCreate getImageListForButton(int buttonIndex) {
         List<Integer> imges=Arrays.asList();
@@ -36,29 +46,36 @@ public class SecondActivity extends AppCompatActivity  {
         String webLink="";
         int table=0;
 
-        DataCreate data = new DataCreate(imges,name,table,price,webLink);
 
         // Determine the appropriate imageList based on the buttonIndex
         switch (buttonIndex) {
             case 1:
-                data.imges = Arrays.asList(R.drawable.image1, R.drawable.image2);
-                data.name = "Intel i9";
-                data.table = R.drawable.image2;
-                data.price = "1459 zł";
-                data.webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                imges = Arrays.asList(R.drawable.image1, R.drawable.image2);
+                name = "Intel i9";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
-//            case 2:
-//                imageList = Arrays.asList(R.drawable.image4, R.drawable.image5, R.drawable.image6);
-//                break;
+
+            case 2:
+                imges = Arrays.asList(R.drawable.image1, R.drawable.image2);
+                name = "Intel i9";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+
             // Add more cases as needed
             default:
-                data.imges = Collections.emptyList();
-                data.name="";
                 break;
         }
 
-        return data;
+        return new DataCreate(imges,name,table,price,webLink);
     }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +86,17 @@ public class SecondActivity extends AppCompatActivity  {
         TVnazwa=findViewById(R.id.TVNazwa);
         IMGV1=findViewById(R.id.IMGV1);
         PRICE=findViewById(R.id.PIRCE);
+        T1=findViewById(R.id.T1);
+        T2=findViewById(R.id.T2);
+        T3=findViewById(R.id.T3);
+        T4=findViewById(R.id.T4);
+        T5=findViewById(R.id.T5);
+        T6=findViewById(R.id.T6);
+        T7=findViewById(R.id.T7);
+        T8=findViewById(R.id.T8);
+        T9=findViewById(R.id.T9);
+        T10=findViewById(R.id.T10);
+
         BT1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,18 +109,19 @@ public class SecondActivity extends AppCompatActivity  {
         Bundle extras = getIntent().getExtras();
         if (extras != null && extras.containsKey("buttonIndex")) {
             int buttonIndex = extras.getInt("buttonIndex");
-
+            DataCreate data = getImageListForButton(buttonIndex);
             ViewPager2 viewPager2 = findViewById(R.id.VP0);
-            List<Integer> imageList = getImageListForButton(buttonIndex).imges;
-            TVnazwa.setText(getImageListForButton(buttonIndex).name);
-            IMGV1.setImageResource(getImageListForButton(buttonIndex).table);
-            PRICE.setText(getImageListForButton(buttonIndex).price);
+            List<Integer> imageList = data.imges;
+            TVnazwa.setText(data.name);
+            IMGV1.setImageResource(data.table);
+            PRICE.setText(data.price);
             ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(imageList);
-            viewPager2.setAdapter(imagePagerAdapter);//
+            viewPager2.setAdapter(imagePagerAdapter);
+
             BT3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url =getImageListForButton(buttonIndex).webLink;
+                String url =data.webLink;
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }
