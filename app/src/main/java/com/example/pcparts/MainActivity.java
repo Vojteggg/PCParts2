@@ -5,6 +5,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -127,6 +128,47 @@ public class MainActivity extends AppCompatActivity{
         TV22 = findViewById(R.id.TV22);
         TV23 = findViewById(R.id.TV23);
         TV24 = findViewById(R.id.TV24);
+
+        IB1.setImageResource(R.drawable.i9_1_1);
+        IB2.setImageResource(R.drawable.i9_2_1);
+        IB3.setImageResource(R.drawable.i9_3_1);
+        IB4.setImageResource(R.drawable.i7_1_1);
+        IB5.setImageResource(R.drawable.i7_2_1);
+        IB6.setImageResource(R.drawable.i7_3_1);
+        IB7.setImageResource(R.drawable.i5_1_1);
+        IB8.setImageResource(R.drawable.i5_2_1);
+        IB9.setImageResource(R.drawable.i5_3_1);
+        IB10.setImageResource(R.drawable.i3_1_1);
+        IB11.setImageResource(R.drawable.i3_2_1);
+        IB12.setImageResource(R.drawable.i3_3_1);
+
+        TV1.setText("Intel Core\ni9-12900K");
+        TV2.setText("Intel Core\ni9-13900KS");
+        TV3.setText("Intel Core\ni9-11900K");
+        TV4.setText("Intel Core\ni7-12700K");
+        TV5.setText("Intel Core\ni7-11700KF");
+        TV6.setText("Intel Core\ni7-10700F");
+        TV7.setText("Intel Core\ni5-12400F");
+        TV8.setText("Intel Core\ni5-12600K");
+        TV9.setText("Intel Core\ni5-10400F");
+        TV10.setText("Intel Core\ni3-10100F");
+        TV11.setText("Intel Core\ni3-12100");
+        TV12.setText("Intel Core\ni3-10105");
+
+        TV1.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV2.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV3.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV4.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV5.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV6.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV7.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV8.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV9.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV10.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV11.setBackgroundColor(Color.parseColor("#ededeb"));
+        TV12.setBackgroundColor(Color.parseColor("#ededeb"));
+
+
 
 
         IB1.setOnClickListener(new View.OnClickListener() {

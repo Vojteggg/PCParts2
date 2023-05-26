@@ -50,16 +50,96 @@ public class SecondActivity extends AppCompatActivity  {
         // Determine the appropriate imageList based on the buttonIndex
         switch (buttonIndex) {
             case 1:
-                imges = Arrays.asList(R.drawable.image1, R.drawable.image2);
-                name = "Intel i9";
+                imges = Arrays.asList(R.drawable.i9_1_1);
+                name = "Intel Core i9-12900K";
+                table = 0;
+                price = "2099,00 zł";
+                webLink="https://www.x-kom.pl/p/689606-procesor-intel-core-i9-intel-core-i9-12900k.html";
+                break;
+
+            case 2:
+                imges = Arrays.asList(R.drawable.i9_2_1, R.drawable.i9_2_2, R.drawable.i9_2_3, R.drawable.i9_2_4, R.drawable.i9_2_5, R.drawable.i9_2_6);
+                name = "Intel Core i9-13900KS";
+                table = 0;
+                price = "N/d";
+                webLink="https://www.x-kom.pl/p/1101211-procesor-intel-core-i9-intel-core-i9-13900ks.html";
+                break;
+
+            case 3:
+                imges = Arrays.asList(R.drawable.i9_3_1, R.drawable.i9_3_2, R.drawable.i9_3_3);
+                name = "Intel Core i9-11900K";
+                table = 0;
+                price = "1769,00 zł";
+                webLink="https://www.x-kom.pl/p/626765-procesor-intel-core-i9-intel-core-i9-11900k.html";
+                break;
+
+            case 4:
+                imges = Arrays.asList(R.drawable.i7_1_1);
+                name = "Intel Core i7-12700K";
                 table = R.drawable.image2;
                 price = "1459 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
-            case 2:
-                imges = Arrays.asList(R.drawable.image1, R.drawable.image2);
-                name = "Intel i9";
+            case 5:
+                imges = Arrays.asList(R.drawable.i7_2_1, R.drawable.i7_2_2);
+                name = "Intel Core i7-11700KF";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 6:
+                imges = Arrays.asList(R.drawable.i7_3_1, R.drawable.i7_3_2);
+                name = "Intel Core i7-10700F";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 7:
+                imges = Arrays.asList(R.drawable.i5_1_1);
+                name = "Intel Core i5-12400F";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 8:
+                imges = Arrays.asList(R.drawable.i5_2_1);
+                name = "Intel Core i5-12600K";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 9:
+                imges = Arrays.asList(R.drawable.i5_3_1);
+                name = "Intel Core i5-10400F";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 10:
+                imges = Arrays.asList(R.drawable.i3_1_1);
+                name = "Intel Core i3-10100F";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 11:
+                imges = Arrays.asList(R.drawable.i3_2_1);
+                name = "Intel Core i3-12100";
+                table = R.drawable.image2;
+                price = "1459 zł";
+                webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
+                break;
+
+            case 12:
+                imges = Arrays.asList(R.drawable.i3_3_1, R.drawable.i3_3_2);
+                name = "Intel Core i3-10105";
                 table = R.drawable.image2;
                 price = "1459 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
