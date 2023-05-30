@@ -1,0 +1,13 @@
+Nazwa,Cena,Socket,Architektura,LRdzeni,LWatkow,CzyMnoznik,Pamiec,Grafika,TDP,Taktowanie,TaktTurbo,KodSklepu
+"Intel Core i9-12900K",2099.00,1700,12,16,24,"Tak",30,"Intel UHD Graphics 770",125,3.2,5.2,689606
+"Intel Core i9-13900KS",3679.00,1700,13,24,32,"Tak",36,"Intel UHD Graphics 770",150,3.2,6.0,1101211
+"Intel Core i9-11900K",1769.00,1200,11,8,16,"Tak",16,"Intel UHD Graphics 750",125,3.5,5.3,626765
+"Intel Core i7-12700K",1599.00,1700,12,12,20,"Tak",25,"Intel UHD Graphics 770",125,3.6,5.0,689603
+"Intel Core i7-11700KF",1299.00,1200,11,8,16,"Tak",16,"Brak",125,3.6,5.0,626762
+"Intel Core i7-10700F",1039.00,1200,10,8,16,"Nie",16,"Brak",65,2.9,4.8,564443
+"Intel Core i5-12400F",729.00,1700,12,6,12,"Nie",18,"Brak",65,2.5,4.4,702238
+"Intel Core i5-12600K",1249.00,1700,12,10,16,"Tak",20,"Intel UHD Graphics 770",125,3.7,4.9,689598
+"Intel Core i5-10400F",479.00,1200,10,6,12,"Nie",12,"Brak",65,2.9,4.3,564465
+"Intel Core i3-10100F",299.00,1200,10,4,8,"Nie",6,"Brak",65,3.6,4.3,596730
+"Intel Core i3-12100",639.00,1700,12,4,8,"Nie",12,"Intel UHD Graphics 730",60,3.3,4.3,702241
+"Intel Core i3-10105",569.00,1200,10,4,8,"Nie",6,"Intel UHD Graphics 630",65,3.7,4.4,638657

@@ -1,26 +1,62 @@
 package com.example.pcparts;
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity{
+    String csvFile = "path/to/your/csv/file.csv";
+    String line = "";
+    String csvSplitBy = ",";
 
+    List<String> names = new ArrayList<>();
+    List<Integer> cores = new ArrayList<>();
+    List<Double> prices = new ArrayList<>();
+    // Add additional lists for other columns as needed
+
+    public static void main(String[] args) {
+        String csvFile = "raw/data_app.csv";
+        String line = "";
+        String csvSplitBy = ",";
+
+        List<String> names = new ArrayList<>();
+        List<Integer> cores = new ArrayList<>();
+        List<Double> prices = new ArrayList<>();
+        // Add additional lists for other columns as needed
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            // Skip the header line
+            br.readLine();
+
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(csvSplitBy);
+
+                // Extract values from the columns
+                String name = data[0].replaceAll("^\"|\"$", "");
+                int coresValue = Integer.parseInt(data[4]);
+                double price = Double.parseDouble(data[1]);
+
+                // Store values in the corresponding lists
+                names.add(name);
+                cores.add(coresValue);
+                prices.add(price);
+                // Add additional lines to store values in other lists for different columns
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     ImageButton IB1;
     ImageButton IB2;
     ImageButton IB3;
@@ -155,41 +191,40 @@ public class MainActivity extends AppCompatActivity{
         TV11.setText("Intel Core\ni3-12100");
         TV12.setText("Intel Core\ni3-10105");
 
-        TV1.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV2.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV3.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV4.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV5.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV6.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV7.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV8.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV9.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV10.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV11.setBackgroundColor(Color.parseColor("#ededeb"));
-        TV12.setBackgroundColor(Color.parseColor("#ededeb"));
+//        TV1.setBackgroundColor(Color.parseColor("#f2f2f2"));
+
+        for (int i = 1; i <= 24; i++) {
+            int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+            TextView textView = findViewById(textViewId);
+            textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+        }
 
 
 
 
-        IB1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("buttonIndex", 1);
-                startActivity(intent);
-            }
-        });//
-        IB2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("buttonIndex", 2);
-                startActivity(intent);
-            }
-        });//
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+//        IB1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+//                intent.putExtra("buttonIndex", 1);
+//                startActivity(intent);
+//            }
+//        });
+
+        for (int i = 1; i <= 24; i++) {
+            int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+            ImageButton imageButton = findViewById(buttonId);
+            final int buttonIndex = i;
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                    intent.putExtra("buttonIndex", buttonIndex);
+                    startActivity(intent);
+                }
+            });
+        }
 
 
 

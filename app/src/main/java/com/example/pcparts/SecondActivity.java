@@ -77,7 +77,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i7_1_1);
                 name = "Intel Core i7-12700K";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "1599,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -85,7 +85,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i7_2_1, R.drawable.i7_2_2);
                 name = "Intel Core i7-11700KF";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "1299,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -93,7 +93,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i7_3_1, R.drawable.i7_3_2);
                 name = "Intel Core i7-10700F";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "1039,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -101,7 +101,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i5_1_1);
                 name = "Intel Core i5-12400F";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "729,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -109,7 +109,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i5_2_1);
                 name = "Intel Core i5-12600K";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "1249,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -117,7 +117,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i5_3_1);
                 name = "Intel Core i5-10400F";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "479,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -125,7 +125,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i3_1_1);
                 name = "Intel Core i3-10100F";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "299,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -133,7 +133,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i3_2_1);
                 name = "Intel Core i3-12100";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "639,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
@@ -141,7 +141,7 @@ public class SecondActivity extends AppCompatActivity  {
                 imges = Arrays.asList(R.drawable.i3_3_1, R.drawable.i3_3_2);
                 name = "Intel Core i3-10105";
                 table = R.drawable.image2;
-                price = "1459 zł";
+                price = "569,00 zł";
                 webLink="https://www.x-kom.pl/p/533441-procesor-intel-core-i9-intel-core-i9-10980xe.html";
                 break;
 
