@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -38,6 +42,8 @@ public class SecondActivity extends AppCompatActivity  {
     TextView T8;
     TextView T9;
     TextView T10;
+
+
 
     private DataCreate getImageListForButton(int buttonIndex) {
         List<Integer> imges=Arrays.asList();
@@ -161,6 +167,8 @@ public class SecondActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+
+
         BT1= findViewById(R.id.BT1);
         BT3= findViewById(R.id.BT3);
         TVnazwa=findViewById(R.id.TVNazwa);
@@ -176,6 +184,7 @@ public class SecondActivity extends AppCompatActivity  {
         T8=findViewById(R.id.T8);
         T9=findViewById(R.id.T9);
         T10=findViewById(R.id.T10);
+
 
         BT1.setOnClickListener(new View.OnClickListener() {
             @Override

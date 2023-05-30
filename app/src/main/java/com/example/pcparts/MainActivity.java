@@ -2,7 +2,11 @@ package com.example.pcparts;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,53 +14,35 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
-    String csvFile = "path/to/your/csv/file.csv";
-    String line = "";
-    String csvSplitBy = ",";
 
-    List<String> names = new ArrayList<>();
-    List<Integer> cores = new ArrayList<>();
-    List<Double> prices = new ArrayList<>();
-    // Add additional lists for other columns as needed
-
-    public static void main(String[] args) {
         String csvFile = "raw/data_app.csv";
         String line = "";
         String csvSplitBy = ",";
 
         List<String> names = new ArrayList<>();
-        List<Integer> cores = new ArrayList<>();
         List<Double> prices = new ArrayList<>();
+        List<Integer> socket = new ArrayList<>();
+        List<Integer> architektura = new ArrayList<>();
+        List<Integer> lrdzeni = new ArrayList<>();
+        List<Integer> lwatkow = new ArrayList<>();
+        List<String> czymnoznik = new ArrayList<>();
+        List<Integer> pamiec = new ArrayList<>();
+        List<Integer> tdp = new ArrayList<>();
+        List<Double> taktowanie = new ArrayList<>();
+        List<Double> turbo = new ArrayList<>();
+        List<String> nazwaZdjecia = new ArrayList<>();
+
+
         // Add additional lists for other columns as needed
 
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-            // Skip the header line
-            br.readLine();
 
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(csvSplitBy);
 
-                // Extract values from the columns
-                String name = data[0].replaceAll("^\"|\"$", "");
-                int coresValue = Integer.parseInt(data[4]);
-                double price = Double.parseDouble(data[1]);
-
-                // Store values in the corresponding lists
-                names.add(name);
-                cores.add(coresValue);
-                prices.add(price);
-                // Add additional lines to store values in other lists for different columns
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     ImageButton IB1;
     ImageButton IB2;
     ImageButton IB3;
@@ -115,6 +101,23 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Spinner sortingSpinner = findViewById(R.id.sortingSpinner);
+        sortingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedOption = parent.getItemAtPosition(position).toString();
+                // Call a method to sort the items based on the selected option
+                sortItems(selectedOption);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Handle the case when nothing is selected
+            }
+        });
+
+
         IB1 = findViewById(R.id.IB1);
         IB2 = findViewById(R.id.IB2);
         IB3 = findViewById(R.id.IB3);
@@ -165,56 +168,72 @@ public class MainActivity extends AppCompatActivity{
         TV23 = findViewById(R.id.TV23);
         TV24 = findViewById(R.id.TV24);
 
-        IB1.setImageResource(R.drawable.i9_1_1);
-        IB2.setImageResource(R.drawable.i9_2_1);
-        IB3.setImageResource(R.drawable.i9_3_1);
-        IB4.setImageResource(R.drawable.i7_1_1);
-        IB5.setImageResource(R.drawable.i7_2_1);
-        IB6.setImageResource(R.drawable.i7_3_1);
-        IB7.setImageResource(R.drawable.i5_1_1);
-        IB8.setImageResource(R.drawable.i5_2_1);
-        IB9.setImageResource(R.drawable.i5_3_1);
-        IB10.setImageResource(R.drawable.i3_1_1);
-        IB11.setImageResource(R.drawable.i3_2_1);
-        IB12.setImageResource(R.drawable.i3_3_1);
+        try (InputStream inputStream = getResources().openRawResource(R.raw.data_app);
+             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
 
-        TV1.setText("Intel Core\ni9-12900K");
-        TV2.setText("Intel Core\ni9-13900KS");
-        TV3.setText("Intel Core\ni9-11900K");
-        TV4.setText("Intel Core\ni7-12700K");
-        TV5.setText("Intel Core\ni7-11700KF");
-        TV6.setText("Intel Core\ni7-10700F");
-        TV7.setText("Intel Core\ni5-12400F");
-        TV8.setText("Intel Core\ni5-12600K");
-        TV9.setText("Intel Core\ni5-10400F");
-        TV10.setText("Intel Core\ni3-10100F");
-        TV11.setText("Intel Core\ni3-12100");
-        TV12.setText("Intel Core\ni3-10105");
+            // Skip the header line
+            br.readLine();
 
-//        TV1.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(csvSplitBy);
 
-        for (int i = 1; i <= 24; i++) {
+                // Extract values from the columns
+                String name = data[0].replaceAll("^\"|\"$", "").replace("\\n", "\n");
+                double price = Double.parseDouble(data[1]);
+                int socketV = Integer.parseInt(data[2]);
+                int architekturaV = Integer.parseInt(data[3]);
+                int lrdzeniV = Integer.parseInt(data[4]);
+                int lwatkowV = Integer.parseInt(data[5]);
+                String czymnoznikV = data[6].replaceAll("^\"|\"$", "");
+                int pamiecV = Integer.parseInt(data[7]);
+                int tdpV = Integer.parseInt(data[9]);
+                double taktowanieV = Double.parseDouble(data[10]);
+                double turboV = Double.parseDouble(data[11]);
+                String nazwaZdj = data[13].replaceAll("^\"|\"$", "");
+                // Store values in the corresponding lists
+
+                names.add(name);
+                prices.add(price);
+                socket.add(socketV);
+                architektura.add(architekturaV);
+                lrdzeni.add(lrdzeniV);
+                lwatkow.add(lwatkowV);
+                czymnoznik.add(czymnoznikV);
+                pamiec.add(pamiecV);
+                tdp.add(tdpV);
+                taktowanie.add(taktowanieV);
+                turbo.add(turboV);
+                nazwaZdjecia.add(nazwaZdj);
+                // Add additional lines to store values in other lists for different columns
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+        for (int i = 1; i <= 12; i++) {
             int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+            int imageButtonId = getResources().getIdentifier("IB"+i,"id", getPackageName());
             TextView textView = findViewById(textViewId);
+            ImageButton imageButton = findViewById(imageButtonId);
             textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            textView.setText(names.get(i - 1));
+            String imageName = nazwaZdjecia.get(i-1);
+            int imageResourceId = getResources().getIdentifier(imageName,"drawable",getPackageName());
+            imageButton.setImageResource(imageResourceId);
+
         }
 
 
 
 
-
-//        IB1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-//                intent.putExtra("buttonIndex", 1);
-//                startActivity(intent);
-//            }
-//        });
-
         for (int i = 1; i <= 24; i++) {
             int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
             ImageButton imageButton = findViewById(buttonId);
+            int textId = getResources().getIdentifier("TV"+i,"id",getPackageName());
+            TextView textView = findViewById(textId);
             final int buttonIndex = i;
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -224,10 +243,34 @@ public class MainActivity extends AppCompatActivity{
                     startActivity(intent);
                 }
             });
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                    intent.putExtra("buttonIndex", buttonIndex);
+                    startActivity(intent);
+                }
+            });
         }
-
-
-
-
     }
+    private void sortItems(String selectedOption) {
+        if (selectedOption.equals("Liczba rdzeni rosnąco")) {
+            // Sort the items based on the cores list
+            Collections.sort(names, (item1, item2) -> {
+                int index1 = names.indexOf(item1);
+                int index2 = names.indexOf(item2);
+                return Integer.compare(lrdzeni.get(index1), lrdzeni.get(index2));
+            });
+
+            // Update the TextViews with the sorted names
+            for (int i = 1; i <= 12; i++) {
+                int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                TextView textView = findViewById(textViewId);
+                textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                textView.setText(names.get(i - 1));
+            }
+        }
+        // Implement sorting for other options if needed
+    }
+
 }

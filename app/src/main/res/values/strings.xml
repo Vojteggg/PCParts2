@@ -2,4 +2,10 @@
 <resources>
     <string name="app_name">PCParts</string>
     <string name="txtprocesor1">procesor i9</string>
+    <string-array name="sorting_options">
+        <item>Name</item>
+        <item>Price</item>
+        <item>Liczba rdzeni rosnąco</item>
+    </string-array>
+
 </resources>
