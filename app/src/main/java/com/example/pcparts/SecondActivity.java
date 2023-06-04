@@ -679,27 +679,27 @@ public class SecondActivity extends AppCompatActivity  {
             TVnazwa.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
             IMGV1.setImageResource(data.table);
             PRICE.setText(decimalFormat.format(data.price)+" zł");
-            TVSocket.setText("Socket");
+            TVSocket.setText("Socket  ");
             TVSocket2.setText(String.valueOf(data.socket));
-            TVArchitecture.setText("Architektura nr");
+            TVArchitecture.setText("Architektura nr  ");
             TVArchitecture2.setText(String.valueOf(data.architecture));
-            TVRdzenie.setText("Liczba rdzeni");
+            TVRdzenie.setText("Liczba rdzeni  ");
             TVRdzenie2.setText(String.valueOf(data.noCores));
-            TVWatki.setText("Liczba wątków");
+            TVWatki.setText("Liczba wątków  ");
             TVWatki2.setText(String.valueOf(data.noThreads));
-            TVMnoznik.setText("Odblokowany mnożnik");
+            TVMnoznik.setText("Odblokowany mnożnik  ");
             TVMnoznik2.setText(data.isTurbo);
-            TVPamiec.setText("Pamięć podręczna");
+            TVPamiec.setText("Pamięć podręczna  ");
             TVPamiec2.setText(String.valueOf(data.memory)+" MB");
-            TVGrafika.setText("Układ graficzny");
+            TVGrafika.setText("Układ graficzny  ");
             TVGrafika2.setText(data.graphics);
-            TVTdp.setText("Pobór mocy (TDP)");
+            TVTdp.setText("Pobór mocy (TDP)  ");
             TVTdp2.setText(String.valueOf(data.tdp)+" W");
-            TVTaktowanie.setText("Taktowanie rdzenia (bazowe)");
+            TVTaktowanie.setText("Taktowanie rdzenia (bazowe)  ");
             TVTaktowanie2.setText(String.valueOf(data.baseSpeed)+" Ghz");
-            TVTurbo.setText("Taktowanie rdzenia (tryb turbo)");
+            TVTurbo.setText("Taktowanie rdzenia (tryb turbo)  ");
             TVTurbo2.setText(String.valueOf(data.turboSpeed)+" Ghz");
-            TVKodsklepu.setText("Kod sklepu");
+            TVKodsklepu.setText("Kod sklepu  ");
             TVKodsklepu2.setText(String.valueOf(data.shopCode));
 
 
