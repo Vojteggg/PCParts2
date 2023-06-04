@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-        for (int i = 1; i <= 12; i++) {
+        for (int i = 1; i <= 24; i++) {
             int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
             int imageButtonId = getResources().getIdentifier("IB"+i,"id", getPackageName());
             TextView textView = findViewById(textViewId);
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity{
             });
 
             // Update the TextViews with the sorted names
-            for (int i = 1; i <= 12; i++) {
+            for (int i = 1; i <= 24; i++) {
                 int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
                 TextView textView = findViewById(textViewId);
                 textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
