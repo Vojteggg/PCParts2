@@ -3,9 +3,20 @@
     <string name="app_name">PCParts</string>
     <string name="txtprocesor1">procesor i9</string>
     <string-array name="sorting_options">
-        <item>Name</item>
-        <item>Price</item>
+        <item>Nazwa A-Z</item>
+        <item>Nazwa Z-A</item>
+        <item>Cena rosnąco</item>
+        <item>Cena malejąco</item>
         <item>Liczba rdzeni rosnąco</item>
+        <item>Liczba rdzeni malejąco</item>
+        <item>Liczba wątków rosnąco</item>
+        <item>Liczba wątków malejąco</item>
+        <item>Pamięć podręczna rosnąco</item>
+        <item>Pamięć podręczna malejąco</item>
+        <item>Pobór mocy (TDP) rosnąco</item>
+        <item>Pobór mocy (TDP) malejąco</item>
+        <item>Taktowanie rosnąco</item>
+        <item>Taktowanie malejąco</item>
     </string-array>
 
 </resources>

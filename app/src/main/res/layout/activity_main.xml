@@ -38,10 +38,20 @@
 
             </LinearLayout>
 
-            <Spinner
-                android:id="@+id/sortingSpinner"
+            <TextView
+                android:id="@+id/TVSortuj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_bold"
+                android:text="Sortuj po:"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sortingSpinner"
+                android:layout_width="297dp"
+                android:layout_height="48dp"
                 android:entries="@array/sorting_options" />
 
 

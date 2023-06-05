@@ -254,23 +254,617 @@ public class MainActivity extends AppCompatActivity{
         }
     }
     private void sortItems(String selectedOption) {
-        if (selectedOption.equals("Liczba rdzeni rosnąco")) {
-            // Sort the items based on the cores list
-            Collections.sort(names, (item1, item2) -> {
-                int index1 = names.indexOf(item1);
-                int index2 = names.indexOf(item2);
-                return Integer.compare(lrdzeni.get(index1), lrdzeni.get(index2));
-            });
+        switch (selectedOption) {
+            case "Liczba rdzeni rosnąco":
+                // Sort the items based on the prices list
+                List<Integer> indexes = new ArrayList<>();
+                for (int i = 0; i < lrdzeni.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(lrdzeni.get(index1), lrdzeni.get(index2)));
 
-            // Update the TextViews with the sorted names
-            for (int i = 1; i <= 24; i++) {
-                int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
-                TextView textView = findViewById(textViewId);
-                textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
-                textView.setText(names.get(i - 1));
-            }
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+
+            case "Cena rosnąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < prices.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(prices.get(index1), prices.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Cena malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < prices.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(prices.get(index2), prices.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Liczba rdzeni malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < lrdzeni.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(lrdzeni.get(index2), lrdzeni.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Nazwa A-Z":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < names.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> names.get(index1).compareTo(names.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Nazwa Z-A":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < names.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> names.get(index2).compareTo(names.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Liczba wątków rosnąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < lwatkow.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(lwatkow.get(index1), lwatkow.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Liczba wątków malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < lwatkow.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(lwatkow.get(index2), lwatkow.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Pamięć podręczna rosnąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < pamiec.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(pamiec.get(index1), pamiec.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Pamięć podręczna malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < lwatkow.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(pamiec.get(index2), pamiec.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Pobór mocy (TDP) rosnąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < tdp.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(tdp.get(index1), tdp.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Pobór mocy (TDP) malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < tdp.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(tdp.get(index2), tdp.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Taktowanie rosnąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < taktowanie.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(taktowanie.get(index1), taktowanie.get(index2)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case "Taktowanie malejąco":
+                // Sort the items based on the prices list
+                indexes = new ArrayList<>();
+                for (int i = 0; i < taktowanie.size(); i++) {
+                    indexes.add(i);
+                }
+                Collections.sort(indexes, (index1, index2) -> Double.compare(taktowanie.get(index2), taktowanie.get(index1)));
+
+                // Update the TextViews with the sorted names and button indexes
+                for (int i = 1; i <= 24; i++) {
+                    int textViewId = getResources().getIdentifier("TV" + i, "id", getPackageName());
+                    TextView textView = findViewById(textViewId);
+                    textView.setBackgroundColor(Color.parseColor("#f2f2f2"));
+                    int index = indexes.get(i-1);
+                    textView.setText(names.get(index));
+
+                    int buttonId = getResources().getIdentifier("IB" + i, "id", getPackageName());
+                    ImageButton imageButton = findViewById(buttonId);
+                    String imageName = nazwaZdjecia.get(index);
+                    int imageResourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                    imageButton.setImageResource(imageResourceId);
+
+                    final int buttonIndex = index+1; // Store the index in a final variable
+
+                    imageButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                            intent.putExtra("buttonIndex", buttonIndex); // Use buttonIndex instead of index
+                            startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            // Add cases for other sorting options if needed
+            default:
+                // Handle the case when nothing is selected
+                break;
         }
-        // Implement sorting for other options if needed
+
     }
+
 
 }
