@@ -1,6 +1,7 @@
 package com.example.pcparts;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import java.util.List;
+import java.util.Map;
 
 public class SecondActivity extends AppCompatActivity  {
     String line = "";
@@ -68,6 +70,8 @@ public class SecondActivity extends AppCompatActivity  {
     TextView TVTurbo2;
     TextView TVKodsklepu;
     TextView TVKodsklepu2;
+
+
 
 
     DecimalFormat decimalFormat = new DecimalFormat("0.00");
@@ -337,7 +341,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(12);
                 turboV=turbo.get(12);
                 shopCodeV=kodSklepu.get(12);
-                table = 0;
+                table = R.drawable.r9_1_tab;
                 webLink="https://www.x-kom.pl/p/689606-procesor-intel-core-i9-intel-core-i9-12900k.html";
                 break;
 
@@ -356,7 +360,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(13);
                 turboV=turbo.get(13);
                 shopCodeV=kodSklepu.get(13);
-                table = 0;
+                table = R.drawable.r9_2_tab;
                 webLink="https://www.x-kom.pl/p/1072683-procesor-amd-ryzen-9-amd-ryzen-9-7950x.html";
                 break;
 
@@ -375,7 +379,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(14);
                 turboV=turbo.get(14);
                 shopCodeV=kodSklepu.get(14);
-                table = 0;
+                table = R.drawable.r9_3_tab;
                 webLink="https://www.x-kom.pl/p/1117003-procesor-amd-ryzen-9-amd-ryzen-9-7950x3d.html";
                 break;
 
@@ -394,7 +398,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(15);
                 turboV=turbo.get(15);
                 shopCodeV=kodSklepu.get(15);
-                table = 0;
+                table = R.drawable.r7_1_tab;
                 webLink="https://www.x-kom.pl/p/735724-procesor-amd-ryzen-7-amd-ryzen-7-5800x3d.html";
                 break;
 
@@ -413,7 +417,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(16);
                 turboV=turbo.get(16);
                 shopCodeV=kodSklepu.get(16);
-                table = 0;
+                table = R.drawable.r7_2_tab;
                 webLink="https://www.x-kom.pl/p/597430-procesor-amd-ryzen-7-amd-ryzen-7-5800x.html";
                 break;
 
@@ -432,7 +436,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(17);
                 turboV=turbo.get(17);
                 shopCodeV=kodSklepu.get(17);
-                table = 0;
+                table = R.drawable.r7_3_tab;
                 webLink="https://www.x-kom.pl/p/1072717-procesor-amd-ryzen-7-amd-ryzen-7-7700x.html";
                 break;
 
@@ -451,7 +455,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(18);
                 turboV=turbo.get(18);
                 shopCodeV=kodSklepu.get(18);
-                table = 0;
+                table = R.drawable.r5_1_tab;
                 webLink="https://www.x-kom.pl/p/735703-procesor-amd-ryzen-5-amd-ryzen-5-5600.html";
                 break;
 
@@ -470,7 +474,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(19);
                 turboV=turbo.get(19);
                 shopCodeV=kodSklepu.get(19);
-                table = 0;
+                table = R.drawable.r5_2_tab;
                 webLink="https://www.x-kom.pl/p/597427-procesor-amd-ryzen-5-amd-ryzen-5-5600x.html";
                 break;
 
@@ -489,7 +493,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(20);
                 turboV=turbo.get(20);
                 shopCodeV=kodSklepu.get(20);
-                table = 0;
+                table = R.drawable.r5_3_tab;
                 webLink="https://www.x-kom.pl/p/1048488-procesor-amd-ryzen-5-amd-ryzen-5-3600.html";
                 break;
 
@@ -508,7 +512,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(21);
                 turboV=turbo.get(21);
                 shopCodeV=kodSklepu.get(21);
-                table = 0;
+                table = R.drawable.r3_1_tab;
                 webLink="https://www.x-kom.pl/p/500097-procesor-amd-ryzen-3-amd-ryzen-3-3200g.html";
                 break;
 
@@ -527,7 +531,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(22);
                 turboV=turbo.get(22);
                 shopCodeV=kodSklepu.get(22);
-                table = 0;
+                table = R.drawable.r3_2_tab;
                 webLink="https://www.x-kom.pl/p/735711-procesor-amd-ryzen-3-amd-ryzen-3-4100.html";
                 break;
 
@@ -546,7 +550,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(23);
                 turboV=turbo.get(23);
                 shopCodeV=kodSklepu.get(23);
-                table = 0;
+                table = R.drawable.r3_3_tab;
                 webLink="https://www.x-kom.pl/p/682220-procesor-amd-ryzen-3-amd-ryzen-3-1200-oem.html";
                 break;
 
@@ -679,28 +683,41 @@ public class SecondActivity extends AppCompatActivity  {
             TVnazwa.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
             IMGV1.setImageResource(data.table);
             PRICE.setText(decimalFormat.format(data.price)+" zł");
+
             TVSocket.setText("Socket  ");
-            TVSocket2.setText(String.valueOf(data.socket));
-            TVArchitecture.setText("Architektura nr  ");
-            TVArchitecture2.setText(String.valueOf(data.architecture));
+            TVSocket2.setText(IntegerToStringDictionary.getStringValue2(data.socket));
+            TVSocket.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVSocket2.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVArchitecture.setText("Architektura  ");
+            TVArchitecture2.setText(IntegerToStringDictionary.getStringValue(data.architecture));
             TVRdzenie.setText("Liczba rdzeni  ");
             TVRdzenie2.setText(String.valueOf(data.noCores));
+            TVRdzenie.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVRdzenie2.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVWatki.setText("Liczba wątków  ");
             TVWatki2.setText(String.valueOf(data.noThreads));
             TVMnoznik.setText("Odblokowany mnożnik  ");
             TVMnoznik2.setText(data.isTurbo);
+            TVMnoznik.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVMnoznik2.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVPamiec.setText("Pamięć podręczna  ");
             TVPamiec2.setText(String.valueOf(data.memory)+" MB");
             TVGrafika.setText("Układ graficzny  ");
             TVGrafika2.setText(data.graphics);
+            TVGrafika.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVGrafika2.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVTdp.setText("Pobór mocy (TDP)  ");
             TVTdp2.setText(String.valueOf(data.tdp)+" W");
             TVTaktowanie.setText("Taktowanie rdzenia (bazowe)  ");
             TVTaktowanie2.setText(String.valueOf(data.baseSpeed)+" Ghz");
+            TVTaktowanie.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVTaktowanie2.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVTurbo.setText("Taktowanie rdzenia (tryb turbo)  ");
             TVTurbo2.setText(String.valueOf(data.turboSpeed)+" Ghz");
             TVKodsklepu.setText("Kod sklepu  ");
             TVKodsklepu2.setText(String.valueOf(data.shopCode));
+            TVKodsklepu.setBackgroundColor(Color.parseColor("#f2f2f2"));
+            TVKodsklepu2.setBackgroundColor(Color.parseColor("#f2f2f2"));
 
 
             BT3.setOnClickListener(new View.OnClickListener() {
