@@ -113,7 +113,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(0);
                 turboV=turbo.get(0);
                 shopCodeV=kodSklepu.get(0);
-                table = 0;
+                table = R.drawable.i9_1_tab;
                 webLink="https://www.x-kom.pl/p/689606-procesor-intel-core-i9-intel-core-i9-12900k.html";
                 break;
 
@@ -132,7 +132,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(1);
                 turboV=turbo.get(1);
                 shopCodeV=kodSklepu.get(1);
-                table = 0;
+                table = R.drawable.i9_2_tab;
                 webLink="https://www.x-kom.pl/p/1101211-procesor-intel-core-i9-intel-core-i9-13900ks.html";
                 break;
 
@@ -151,7 +151,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(2);
                 turboV=turbo.get(2);
                 shopCodeV=kodSklepu.get(2);
-                table = 0;
+                table = R.drawable.i9_3_tab;
                 webLink="https://www.x-kom.pl/p/626765-procesor-intel-core-i9-intel-core-i9-11900k.html";
                 break;
 
@@ -170,7 +170,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(3);
                 turboV=turbo.get(3);
                 shopCodeV=kodSklepu.get(3);
-                table = 0;
+                table = R.drawable.i7_1_tab;
                 webLink="https://www.x-kom.pl/p/689603-procesor-intel-core-i7-intel-core-i7-12700k.html";
                 break;
 
@@ -189,7 +189,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(4);
                 turboV=turbo.get(4);
                 shopCodeV=kodSklepu.get(4);
-                table = 0;
+                table = R.drawable.i7_2_tab;
                 webLink="https://www.x-kom.pl/p/626762-procesor-intel-core-i7-intel-core-i7-11700kf.html";
                 break;
 
@@ -208,7 +208,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(5);
                 turboV=turbo.get(5);
                 shopCodeV=kodSklepu.get(5);
-                table = 0;
+                table = R.drawable.i7_3_tab;
                 webLink="https://www.x-kom.pl/p/564443-procesor-intel-core-i7-intel-core-i7-10700f.html";
                 break;
 
@@ -227,7 +227,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(6);
                 turboV=turbo.get(6);
                 shopCodeV=kodSklepu.get(6);
-                table = 0;
+                table = R.drawable.i5_1_tab;
                 webLink="https://www.x-kom.pl/p/702238-procesory-intel-core-i5-intel-core-i5-12400f.html";
                 break;
 
@@ -246,7 +246,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(7);
                 turboV=turbo.get(7);
                 shopCodeV=kodSklepu.get(7);
-                table = 0;
+                table = R.drawable.i5_2_tab;
                 webLink="https://www.x-kom.pl/p/689598-procesory-intel-core-i5-intel-core-i5-12600k.html";
                 break;
 
@@ -265,7 +265,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(8);
                 turboV=turbo.get(8);
                 shopCodeV=kodSklepu.get(8);
-                table = 0;
+                table = R.drawable.i5_3_tab;
                 webLink="https://www.x-kom.pl/p/564465-procesory-intel-core-i5-intel-core-i5-10400f.html";
                 break;
 
@@ -284,7 +284,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(9);
                 turboV=turbo.get(9);
                 shopCodeV=kodSklepu.get(9);
-                table = 0;
+                table = R.drawable.i3_1_tab;
                 webLink="https://www.x-kom.pl/p/596730-procesor-intel-core-i3-intel-core-i3-10100f.html";
                 break;
 
@@ -303,7 +303,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(10);
                 turboV=turbo.get(10);
                 shopCodeV=kodSklepu.get(10);
-                table = 0;
+                table = R.drawable.i3_2_tab;
                 webLink="https://www.x-kom.pl/p/702241-procesor-intel-core-i3-intel-core-i3-12100.html";
                 break;
 
@@ -322,7 +322,7 @@ public class SecondActivity extends AppCompatActivity  {
                 taktowanieV=taktowanie.get(11);
                 turboV=turbo.get(11);
                 shopCodeV=kodSklepu.get(11);
-                table = 0;
+                table = R.drawable.i3_3_tab;
                 webLink="https://www.x-kom.pl/p/597431-procesor-amd-ryzen-9-amd-ryzen-9-5900x.html";
                 break;
 
@@ -685,7 +685,13 @@ public class SecondActivity extends AppCompatActivity  {
             PRICE.setText(decimalFormat.format(data.price)+" zł");
 
             TVSocket.setText("Socket  ");
-            TVSocket2.setText(IntegerToStringDictionary.getStringValue2(data.socket));
+            if (data.socket==3||data.socket==4||data.socket==5){
+                TVSocket2.setText(IntegerToStringDictionary.getStringValue2(data.socket));
+            }
+            else{
+                TVSocket2.setText(String.valueOf(data.socket));
+            }
+
             TVSocket.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVSocket2.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVArchitecture.setText("Architektura  ");
@@ -712,7 +718,7 @@ public class SecondActivity extends AppCompatActivity  {
             TVTaktowanie2.setText(String.valueOf(data.baseSpeed)+" Ghz");
             TVTaktowanie.setBackgroundColor(Color.parseColor("#f2f2f2"));
             TVTaktowanie2.setBackgroundColor(Color.parseColor("#f2f2f2"));
-            TVTurbo.setText("Taktowanie rdzenia (tryb turbo)  ");
+            TVTurbo.setText("Taktowanie rdzenia (turbo)  ");
             TVTurbo2.setText(String.valueOf(data.turboSpeed)+" Ghz");
             TVKodsklepu.setText("Kod sklepu  ");
             TVKodsklepu2.setText(String.valueOf(data.shopCode));

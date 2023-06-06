@@ -9,11 +9,13 @@
 
     <Button
         android:id="@+id/BT1"
-        android:layout_width="102dp"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="Powrót"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/PIRCE"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +38,7 @@
 
     <TextView
         android:id="@+id/PIRCE2"
-        android:layout_width="wrap_content"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:paddingTop="16dp"
@@ -53,10 +55,10 @@
         android:id="@+id/BT3"
         android:layout_width="102dp"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="Kup teraz!"
-        android:textSize="10sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/PIRCE"
@@ -84,14 +86,14 @@
                 android:layout_width="350dp"
                 android:layout_height="350dp"
                 android:layout_marginTop="32dp">
-
+                <!--    bombastic sideeye     -->
             </androidx.viewpager2.widget.ViewPager2>
 
             <TextView
                 android:id="@+id/TVNazwa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/open_bold"
                 android:text="Nazwa procesora"
                 android:textSize="34sp" />
 
@@ -116,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -143,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -169,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -195,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -221,7 +223,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -247,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -273,7 +275,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -299,7 +301,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -325,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -351,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_vertical"
                     android:text="TextView 2" />
 
             </LinearLayout>
@@ -377,7 +379,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="center_horizontal|left"
                     android:text="TextView 2" />
 
             </LinearLayout>

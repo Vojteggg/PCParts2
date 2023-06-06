@@ -17,6 +17,7 @@ public class IntegerToStringDictionary {
         dictionary2.put(3, "AM3");
         dictionary2.put(4, "AM4");
         dictionary2.put(5, "AM5");
+
         // Add more mappings as needed
     }
 
@@ -26,6 +27,6 @@ public class IntegerToStringDictionary {
     }
     public static String getStringValue2(int number) {
         // Retrieve the string value from the dictionary based on the input number
-        return dictionary2.getOrDefault(number, "Nieznana");
+        return dictionary2.get(number);
     }
 }

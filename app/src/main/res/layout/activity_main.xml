@@ -18,32 +18,35 @@
             android:gravity="center_horizontal">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
+            <TextView
                     android:id="@+id/TVMain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nexa"
+                    android:text="PCPU"
+                    android:textAlignment="center"
+                    android:textSize="60dp" />
+            <TextView
+                    android:id="@+id/TVMain2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="16dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/open_exbold_ital"
-                    android:text="PCParts - najlepsze informacje \no podzespołach!"
+                    android:fontFamily="@font/nexa"
+                    android:text="Najlepsze informacje \no procesorach!"
                     android:textAlignment="center"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
+                    android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/TVSortuj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/open_bold"
+                android:fontFamily="@font/open_sans"
                 android:text="Sortuj po:"
                 android:textAlignment="center"
                 android:textSize="18sp" />
